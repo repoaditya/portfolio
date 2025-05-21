@@ -75,11 +75,11 @@ function App() {
         <CircleDecoration />
         <DotsDecoration />
         <div className="absolute top-0 right-0 p-4 flex gap-4 z-10">
-          <a href="https://linkedin.com/in/aditya-portfolio" target="_blank" rel="noopener noreferrer" 
+          <a href="https://www.linkedin.com/in/aditya-ankur-adi/" target="_blank" rel="noopener noreferrer" 
              className="text-2xl hover:text-blue-400 transition-colors">
             <FaLinkedin />
           </a>
-          <a href="mailto:aditya.ankur" className="text-2xl hover:text-blue-400 transition-colors">
+          <a href="mailto:aditya.ankur.adi@gmail.com" className="text-2xl hover:text-blue-400 transition-colors">
             <FaEnvelope />
           </a>
           <a href="tel:+917301186656" className="text-2xl hover:text-blue-400 transition-colors">
@@ -205,14 +205,14 @@ function App() {
           </motion.h2>
           <div className="flex flex-col md:flex-row gap-8">
             <motion.a 
-              href="mailto:aditya.ankur"
+              href="mailto:aditya.ankur.adi@gmail.com"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-3 bg-gray-800 p-4 rounded-lg text-blue-400"
             >
               <FaEnvelope className="text-2xl" />
-              <span>aditya.ankur</span>
+              <span>aditya.ankur.adi@gmail.com</span>
             </motion.a>
             <motion.a 
               href="tel:+917301186656"
@@ -225,7 +225,7 @@ function App() {
               <span>+91 7301186656</span>
             </motion.a>
             <motion.a 
-              href="https://linkedin.com/in/aditya-portfolio"
+              href="https://www.linkedin.com/in/aditya-ankur-adi/"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}

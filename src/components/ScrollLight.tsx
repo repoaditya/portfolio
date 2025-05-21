@@ -43,6 +43,15 @@ export default function ScrollLight() {
         <p className="text-gray-400">
           Cloud & Automation Specialist
         </p>
+        <div className="mt-6 flex justify-center gap-4">
+          <motion.a
+            href="mailto:aditya.ankur@gmail.com"
+            whileHover={{ scale: 1.1 }}
+            className="text-blue-400 hover:text-blue-300"
+          >
+            Contact Me
+          </motion.a>
+        </div>
       </motion.div>
     </div>
   );
