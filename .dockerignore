@@ -1,0 +1,10 @@
+.git
+node_modules
+dist
+*.log
+.env*
+.dockerignore
+.eslintcache
+coverage
+.DS_Store
+README.md 
