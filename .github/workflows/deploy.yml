@@ -52,10 +52,8 @@ jobs:
 
   deploy-ecr:
     runs-on: ubuntu-latest
-    # Only run ECR deployment if AWS secrets are configured
-    if: ${{ env.AWS_REGION != '' }}
-    env:
-      AWS_REGION: ${{ secrets.AWS_REGION }}
+    needs: deploy-pages
+    if: ${{ success() && secrets.AWS_REGION != '' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
