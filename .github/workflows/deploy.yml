@@ -1,4 +1,4 @@
-name: Deploy App (GitHub Pages + ECR)
+name: Deploy App
 
 on:
   push:
@@ -15,12 +15,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  deploy-pages:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -39,7 +38,6 @@ jobs:
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
 
-      # ----- GitHub Pages -----
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
 
@@ -52,7 +50,16 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      # ----- Docker Build & Push to ECR -----
+  deploy-ecr:
+    runs-on: ubuntu-latest
+    # Only run ECR deployment if AWS secrets are configured
+    if: ${{ env.AWS_REGION != '' }}
+    env:
+      AWS_REGION: ${{ secrets.AWS_REGION }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
