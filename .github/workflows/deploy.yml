@@ -80,3 +80,5 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           
           echo "Image pushed successfully to $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+
+          # Update the ECR image tag in the GitHub Actions workflow
