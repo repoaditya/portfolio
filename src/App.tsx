@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaAws, FaDocker, FaPython } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaPhone, FaAws, FaDocker, FaPython } from 'react-icons/fa';
 import { SiKubernetes, SiTerraform, SiJenkins, SiGrafana, SiPrometheus, SiMysql, SiAnsible } from 'react-icons/si';
 import Scene3D from './components/Scene3D';
 import ParticleField from './components/ParticleField';
